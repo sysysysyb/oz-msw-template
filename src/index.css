@@ -1,0 +1,36 @@
+@layer base,  tailwind, utilities;
+@layer tailwind {
+  @font-face {
+    font-family: "GamjaFlower";
+    src: url("../src/assets/fonts/GamjaFlower-Regular.ttf");
+  }
+  @import "tailwindcss";
+}
+@layer utilities {
+  :root {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @theme {
+    --font-gamja: "GamjaFlower", "sans-serif";
+    --color-primary: #66e04b;
+    --color-secondary: #e7e07a;
+    --color-error-100: #ff0000;
+    --color-error-200: #ff3939;
+    --color-dark: #2e2e2e;
+    --color-white: #fffafa;
+  }
+}
+@layer base {
+  @import url("./assets/styles/reset.css");
+
+  html {
+    height: 100dvh;
+    font-family: "GamjaFlower", "sans-serif";
+  }
+
+  #root {
+    height: 100%;
+  }
+}
